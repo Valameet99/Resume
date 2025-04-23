@@ -86,6 +86,10 @@ nav a:hover::after {
     transition: all 0.3s ease;
     animation: fadeIn 1.2s ease;
     color: #ffffff;
+    .container {
+    padding-top: 80px; /* Add this if not already */
+}
+
 }
 
 
