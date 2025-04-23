@@ -89,6 +89,10 @@ nav a:hover::after {
     transition: all 0.3s ease;
     animation: fadeIn 1.2s ease;
     color: #ffffff;
+    .container {
+    padding-top: 80px; /* Add this if not already */
+}
+
 }
 
 
@@ -202,4 +206,36 @@ button:hover {
     font-size: 14px;
     border-radius: 20px;
 }
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+        margin: 100px auto 30px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 0 10px;
+        padding: 4px 6px;
+    }
+
+    .stat-box {
+        width: 100%;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-icons a img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
 
