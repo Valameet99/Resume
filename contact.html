@@ -1,0 +1,73 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact Me</a>
+    </nav>
+
+    <div class="container fade-in">
+        <h1>Contact Me</h1>
+        <form id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+        
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+        
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+        
+            <button type="submit" class="pulse">Send</button>
+            <form action="https://formsubmit.co/valameet99@gmail.com" method="POST">
+        </form>
+        
+        <div id="thank-you" class="thank-you hidden">
+            <h2>🎉 Thank you for reaching out!</h2>
+            <p>I'll get back to you as soon as possible.</p>
+        </div>
+        
+
+        <div class="social-icons slide-in">
+            <a href="https://www.instagram.com/meet___ahir_99?igsh=OGYzbHhhbzF4N2tp" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/share/1E3ATvbCrZ/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/480px-2023_Facebook_icon.svg.png" alt="Facebook">
+            </a>
+            <a href="https://www.linkedin.com/in/vala-meet-5ab437289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                <img src="https://static.vecteezy.com/system/resources/previews/018/930/480/non_2x/linkedin-logo-linkedin-icon-transparent-free-png.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/Valameet99" target="_blank">
+                <img src="https://avatars.slack-edge.com/2020-11-25/1527503386626_319578f21381f9641cd8_512.png" alt="GitHub">
+            </a>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementById("contact-form");
+        const thankYou = document.getElementById("thank-you");
+    
+        form.addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent actual form submission
+    
+            // Optionally, reset the form fields
+            form.reset();
+    
+            // Hide the form and show thank-you message
+            form.style.display = "none";
+            thankYou.classList.remove("hidden");
+            thankYou.classList.add("show");
+        });
+    </script>
+</body>
+</html>

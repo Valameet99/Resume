@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        .hero {
+            font-size: 24px;
+            text-align: left;
+        }
+        .stack-icons img { 
+            width: 50px;
+        }
+        
+        /* Media Query for Mobile Screens */
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
+            }
+            .stack-icons img {
+                width: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact Me</a>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore My Education, Experience, and Projects using the links above.</p>
+        <section id="home">
+            <h1>Hi, I'm <span style="color: rgb(0, 179, 255);">Vala Meet</span></h1>
+            <h2>Full Stack Developer / Cyber Security Enthusiast</h2>
+            <p>I build responsive websites and interactive web applications.</p>
+            <a href="/Users/dhaval/Desktop/Meetcode/Resume_15_02_2025_12_52_07_am.pdf" download><button>Download Resume</button></a>
+        </section>
+        
+    </div>
+    <!-- Achievements Section (Moved to Bottom & Centered) -->
+<section id="stats">
+    <h2>My Achievements</h2>
+    <div class="stats-container">
+        <div class="stat-box">
+            <h3><span id="projects">0</span>+</h3>
+            <p>Projects Completed</p>
+        </div>
+        <div class="stat-box">
+            <h3><span id="experience">0</span> years</h3>
+            <p>Experience</p>
+        </div>
+    </div>
+</section>
+
+<!-- JavaScript for Stats Animation -->
+<script>
+    function animateValue(id, start, end, duration) {
+        let obj = document.getElementById(id);
+        let range = end - start;
+        let startTime = new Date().getTime();
+        let endTime = startTime + duration;
+
+        function update() {
+            let now = new Date().getTime();
+            let elapsed = now - startTime;
+            let progress = Math.min(elapsed / duration, 1);
+            obj.innerText = Math.floor(progress * range + start);
+            if (progress < 1) requestAnimationFrame(update);
+        }
+        update();
+    }
+
+    animateValue("projects", 0, 50, 2000);
+    animateValue("experience", 0, 5, 2000);
+</script>
+
+    <div class="social-icons">
+        <a href="https://www.instagram.com/meet___ahir_99?igsh=OGYzbHhhbzF4N2tp" target="_blank">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOPHNIADKj_AmVxGiQO65lQCnJKhyf7Qx7GA&s" alt="Instagram" height="20">
+        </a>
+        <a href="https://www.facebook.com/share/1E3ATvbCrZ/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/480px-2023_Facebook_icon.svg.png" alt="Facebook" height="20">
+        </a>
+        <a href="https://www.linkedin.com/in/vala-meet-5ab437289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+            <img src="https://static.vecteezy.com/system/resources/previews/018/930/480/non_2x/linkedin-logo-linkedin-icon-transparent-free-png.png" alt="LinkedIn" height="20">
+        </a>
+        <a href="https://github.com/Valameet99" target="_blank">
+            <img src="https://avatars.slack-edge.com/2020-11-25/1527503386626_319578f21381f9641cd8_512.png" alt="GitHub" height="20">
+        </a>
+        <footer>
+            <p>&copy; 2025 Vala Meet | All Rights Reserved</p>
+        </footer>
+    </div>
+</body>
+</html>
